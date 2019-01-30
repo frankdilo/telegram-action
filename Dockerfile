@@ -10,7 +10,7 @@ LABEL repository="https://github.com/frankdilo/telegram-action"
 LABEL homepage="https://github.com/frankdilo/telegram-action"
 LABEL maintainer="Francesco Di Lorenzo <fradilorenzo92@gmail.com>"
 
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y curl && apt-get install -y jq
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
